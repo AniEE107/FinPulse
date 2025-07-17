@@ -103,12 +103,14 @@ executable_graph = workflow.compile()
 # Enhanced Streamlit UI
 def main():
     st.set_page_config(
-        page_title="Stock Analysis Assistant", 
+        page_title="Stock Analysis Assistant by Manish-Kumar", 
         page_icon="📈",
-        layout="wide"
+        layout="wide",
+        
     )
+        st.markdown("## Stock Analysis Assistant by **Manish-Kumar**")
     
-    st.title("📈 Stock Analysis Assistant")
+    st.title("📈 Stock Analysis Assistant by Manish-Kumar")
     st.markdown("""
     **AI-powered investment analysis** combining real-time Twitter sentiment and stock market data.
     """)
