@@ -108,9 +108,8 @@ def main():
         layout="wide",
         
     )
-        st.markdown("## Stock Analysis Assistant by **Manish-Kumar**")
+    st.markdown("## 📈 Stock Analysis Assistant by **Manish-Kumar**")
     
-    st.title("📈 Stock Analysis Assistant by Manish-Kumar")
     st.markdown("""
     **AI-powered investment analysis** combining real-time Twitter sentiment and stock market data.
     """)
