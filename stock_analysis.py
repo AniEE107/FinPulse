@@ -1,4 +1,23 @@
 import streamlit as st
+# --- Twitter Auth Debug (TEMP) ---
+st.subheader("🔧 Debugging Twitter Auth")
+st.write("Bearer token loaded?", "BEARER_TOKEN" in st.secrets)
+
+client = tweepy.Client(
+    bearer_token=st.secrets["AAAAAAAAAAAAAAAAAAAAAK1g3AEAAAAAjm1zEB%2FP3tXx4UNyUrMR9%2FVNTKk%3DMA5a5AdrD57LLX2kZzDEBMM7RSPRShVsa0PGO6DuEI5edA7ZPU"],
+    consumer_key=st.secrets["4lUX45lD1UUStAjf6Dkcx6XuA"],
+    consumer_secret=st.secrets["FVNTQo6loZjcaU26a2q5MqavQgSdDZ81lZpM1dKIpLxkqnS4R1"],
+    access_token=st.secrets["1940249969971380224-5Ud8tWVunIv1xgOolc8ee7PAfiEGGr"],
+    access_token_secret=st.secrets["ESdqzK4tgZBeAHcqk1yx03SMcfIq1JiZ7XmdrXfsGvcIx"]
+)
+
+try:
+    me = client.get_user(username="2022ugee107")
+    st.success(f"✅ Auth successful: {me.data.username}")
+except Exception as e:
+    st.error(f"❌ Auth failed: {e}")
+# --- End Debug ---
+
 import yfinance as yf
 from langchain_community.llms import Ollama
 from langchain.tools import tool
@@ -205,3 +224,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
